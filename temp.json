@@ -1,0 +1,60 @@
+{
+  "apiVersion": "v1",
+  "kind": "Namespace",
+  "metadata": {
+    "annotations": {
+      "name": "longhorn"
+    },
+    "creationTimestamp": "2023-07-04T13:45:57Z",
+    "deletionTimestamp": "2023-07-04T14:08:11Z",
+    "labels": {
+      "kubernetes.io/metadata.name": "longhorn"
+    },
+    "name": "longhorn",
+    "resourceVersion": "31842324",
+    "uid": "acec4419-1ec6-4cbb-86e2-6b58aacab5d1"
+  },
+  "spec": {
+    "finalizers": []
+  },
+  "status": {
+    "conditions": [
+      {
+        "lastTransitionTime": "2023-07-04T14:08:39Z",
+        "message": "All resources successfully discovered",
+        "reason": "ResourcesDiscovered",
+        "status": "False",
+        "type": "NamespaceDeletionDiscoveryFailure"
+      },
+      {
+        "lastTransitionTime": "2023-07-04T14:08:39Z",
+        "message": "All legacy kube types successfully parsed",
+        "reason": "ParsedGroupVersions",
+        "status": "False",
+        "type": "NamespaceDeletionGroupVersionParsingFailure"
+      },
+      {
+        "lastTransitionTime": "2023-07-04T14:09:15Z",
+        "message": "All content successfully deleted, may be waiting on finalization",
+        "reason": "ContentDeleted",
+        "status": "False",
+        "type": "NamespaceDeletionContentFailure"
+      },
+      {
+        "lastTransitionTime": "2023-07-04T14:08:39Z",
+        "message": "Some resources are remaining: orphans.longhorn.io has 27 resource instances",
+        "reason": "SomeResourcesRemain",
+        "status": "True",
+        "type": "NamespaceContentRemaining"
+      },
+      {
+        "lastTransitionTime": "2023-07-04T14:08:39Z",
+        "message": "Some content in the namespace has finalizers remaining: longhorn.io in 27 resource instances",
+        "reason": "SomeFinalizersRemain",
+        "status": "True",
+        "type": "NamespaceFinalizersRemaining"
+      }
+    ],
+    "phase": "Terminating"
+  }
+}
